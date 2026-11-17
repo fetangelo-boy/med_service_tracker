@@ -12,3 +12,6 @@ INFO/*.docx
 INFO/*.jpg
 INFO/*.jpeg
 INFO/*.png
+
+# Локальные артефакты деплоя
+.deploy/
