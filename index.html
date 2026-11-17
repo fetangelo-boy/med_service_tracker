@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Учебный трекер задач и KPI для медицинского офиса">
+  <title>МедОфис — трекер задач</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">+</div>
+        <div class="brand-text">
+          <strong>МедОфис</strong>
+          <span>трекер задач и KPI</span>
+        </div>
+      </div>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация"></nav>
+
+      <div class="sidebar-foot">
+        <div class="side-note">
+          <span class="side-note-dot"></span>
+          Учебная версия. Данные хранятся в этом браузере.
+        </div>
+        <button class="side-reset" data-action="reset-data">Сбросить демо-данные</button>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" data-action="close-sidebar" hidden></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" data-action="toggle-sidebar" aria-label="Открыть меню">☰</button>
+        <div class="topbar-title" id="pageTitle">Дашборд</div>
+        <div class="topbar-right">
+          <label class="who">
+            <span class="who-label">Вы вошли как</span>
+            <select id="userSwitch" aria-label="Демо-пользователь"></select>
+          </label>
+          <button class="icon-btn bell" data-action="open-notifications" aria-label="Уведомления">
+            <span aria-hidden="true">🔔</span><span class="badge" id="notifBadge" hidden></span>
+          </button>
+        </div>
+      </header>
+
+      <main class="content" id="content"></main>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <h3 id="modalTitle"></h3>
+        <button class="icon-btn" data-action="close-modal" aria-label="Закрыть">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-foot" id="modalFoot"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden role="status"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

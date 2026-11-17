@@ -1,0 +1,14 @@
+# Служебные и локальные файлы
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.env
+.env.*
+node_modules/
+
+# Исходные материалы, не предназначенные для публикации
+INFO/*.docx
+INFO/*.jpg
+INFO/*.jpeg
+INFO/*.png
